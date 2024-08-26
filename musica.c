@@ -8,7 +8,8 @@
 #define TOCAR 5
 #define SAIR 9
 
-typedef struct {
+
+typedef struct No{
 	char titulo[40];
 	char interprete[40];
 	int ID;
@@ -52,13 +53,32 @@ void inserir(Lista * l){
 		l->primeiro = (struct No *) novoNo;
 		l->ultimo = (struct No *) novoNo;
 		novoNo->anterior = NULL;
-		novoNo->proximo = NULL;
 	} else {
+		novoNo->anterior = l->ultimo;
+		l->ultimo->proximo = novoNo;
+		l->ultimo = novoNo;
 	}
 }
 
-void pesquisar(){
-	printf("\nProcurando");
+void pesquisar(Lista l){
+		if (l.primeiro == NULL) {
+		printf("\nEsta vazio");
+		return;
+	}
+	else {
+		int idPesquisa;
+		printf("\nInforme o ID da musica: ");
+	    scanf("%d", &idPesquisa);
+	
+	    No *p = l.primeiro;
+	    while (p != NULL) {
+	        if (p->ID == idPesquisa) {
+	            show(p);
+	            return;
+	        }
+	        p = p->proximo;		
+		}	
+	}
 }
 
 void mostrar(Lista l){
@@ -97,7 +117,7 @@ int main(){
 		switch(opcao){
 			case INSERIR : inserir(&playlist);
 							break;
-			case PESQUISAR : pesquisar();
+			case PESQUISAR : pesquisar(playlist);
 							break;
 			case MOSTRAR : mostrar(playlist);
 							break;
