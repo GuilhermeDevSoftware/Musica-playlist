@@ -5,10 +5,9 @@ Este projeto é um sistema de gerenciamento de playlists de músicas, desenvolvi
 ## Funcionalidades
 
 - **Inserir Música**: Adicione novas músicas à playlist, incluindo informações como título, intérprete, ID e o caminho do arquivo.
-- **Pesquisar Música**: Pesquise músicas na playlist (funcionalidade a ser implementada).
-- **Eliminar Música**: Remova músicas da playlist (funcionalidade a ser implementada).
+- **Pesquisar Música**: Pesquise músicas na playlist através do ID.
 - **Mostrar Músicas**: Exiba todas as músicas cadastradas na playlist.
-- **Tocar Música**: Simule a execução de uma música da playlist (funcionalidade simples).
+- **Tocar Música**: Simule a execução de uma música da playlist (funcionalidade simples a ser implementada).
 
 ## Estrutura do Projeto
 
